@@ -1,6 +1,6 @@
 .aba_sucessos{
 	/*background-color: #282C24;*/
-	background-image: url(../img/block_background_second.png);
+	background-image: url(img/block_background_second.png);
 	border-radius: 3px;
 	color: #B3B3B1;
 }
@@ -8,7 +8,7 @@
 .borda_sucessos{
 	/*border: 3px solid black;*/
 	border: 10px solid transparent;
-	border-image: url(../img/separador.png) 12 round;
+	border-image: url(img/separador.png) 12 round;
 }
 
 .lista_sucessos{
@@ -56,7 +56,7 @@
 	margin-right: 10px;
 }.lista_missoes_sucessos img{
 	border: 7px solid transparent;
-	border-image: url(../img/bordasucesso.png) 25 round;
+	border-image: url(img/bordasucesso.png) 25 round;
 }
 
 .lista_missoes_sucessos_sub{
