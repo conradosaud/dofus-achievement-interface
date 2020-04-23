@@ -1,0 +1,105 @@
+.aba_sucessos{
+	/*background-color: #282C24;*/
+	background-image: url(../img/block_background_second.png);
+	border-radius: 3px;
+	color: #B3B3B1;
+}
+
+.borda_sucessos{
+	/*border: 3px solid black;*/
+	border: 10px solid transparent;
+	border-image: url(../img/separador.png) 12 round;
+}
+
+.lista_sucessos{
+	list-style-type: none;
+	padding: 0;
+	background-color: #34352D;
+}.lista_sucessos li{
+	border-top: 1px solid black;
+	padding: 7px;
+	cursor: pointer;
+}.lista_sucessos li:first-child{
+	border-top: none;
+	padding: 7px;
+}.lista_sucessos li:active{
+	background-color: #50524B;
+}
+
+.lista_sucessos_sub{
+	list-style-type: none;
+	display: none;
+	background-color: #34352D;
+}.lista_sucessos_sub span{
+	float: right;
+	font-size: 12px;
+	font-style: italic;
+}.lista_sucessos_sub li{
+	border: none;
+}.lista_sucessos_sub li:hover{
+	background-color: #50524B;
+}
+
+.lista_missoes_sucessos{
+	list-style-type: none;
+	padding: 0;
+	background-color: #42433F;
+	display: none;
+}.lista_missoes_sucessos li{
+	border-top: 1px solid black;
+	padding: 7px;
+	cursor: pointer;
+}.lista_missoes_sucessos p{
+	font-size: 12px;
+}.lista_missoes_sucessos span{
+	float: right;
+	margin-right: 10px;
+}.lista_missoes_sucessos img{
+	border: 7px solid transparent;
+	border-image: url(../img/bordasucesso.png) 25 round;
+}
+
+.lista_missoes_sucessos_sub{
+	list-style-type: square;
+	background-color: #34352D;
+	display: none;
+	padding-top: 1px;
+}.lista_missoes_sucessos_sub li:first-child{
+	border: none;
+	margin-top: 10px;
+}.lista_missoes_sucessos_sub li:hover{
+	text-decoration: underline;
+}
+
+.lista_bloqueada{
+	cursor:no-drop;
+}.lista_bloqueada li:hover{
+	cursor:no-drop;
+}
+
+.lista_item_bloqueado:hover{
+	cursor:no-drop;
+}
+
+.sucessos_recompensas{
+	background-color: #51524C;
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-right: 10px;
+}.sucessos_recompensas ul{
+	list-style-type: none;
+	padding: 0;
+	
+}.sucessos_recompensas li{
+	border: none;
+	display: inline-block;
+	padding: 1px;
+}.sucessos_recompensas li:not(:first-child):before{
+	content: " | ";
+}
+
+.cord span{
+	font-weight: bolder;
+	cursor: pointer;
+}

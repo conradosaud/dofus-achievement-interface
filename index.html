@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html>
+
+	<!--
+	
+		This project was developed and made available by me, Conrado Saud.
+		Meet me on GitHub: https://github.com/conradosaud
+		Instagram: https://instagram.com/conradosaud
+		Facebook: https://facebook.com/conradosaud
+		
+		Do you know Dofus Creator? Developed by me:
+		https://dofuscreator.com
+	
+		 ***************************************************************  
+		* You can modify and publish it for free, just refer me. Enjoy! *
+		 ***************************************************************
+	
+	-->
+	
+	<head>
+	
+		<meta charset="UTF-8">
+		<meta name="description" content="Missões, sucessos, dicas, profissões, encontre todo conteúdo de Dofus aqui!">
+		<meta name="author" content="Conrado Saud">
+		
+		<title>Dofus Achievements Interface</title>
+	
+		<!-- We need jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	
+		<!-- Bootstrap and custom css style -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="style.css" rel="stylesheet">
+		
+	
+	</head>
+
+	<body>
+	
+	<div class="container">
+	
+		<div class="aba_sucessos col" style="margin-top: 50px; max-height: 600px; overflow: auto;">
+		
+			<div class="row">
+				<div class="col-12 borda_sucessos">
+					<div class="text-center">
+						<h1>Sucessos</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-5 borda_sucessos">
+					<ul class="lista_sucessos">
+						<li id="indice_inicio">Início</li>
+						<li id="indice_geral">Geral</li>
+						<li id="indice_exploracao">Exploração
+						</li>
+						<li id="indice_calaboucos">Calabouços (+)
+							<ul class="lista_sucessos_sub lista_bloqueada">
+								<li>Níveis 1 a 50 <span>Sem informações</span></li>
+								<li>Níveis 51 a 100 <span>Sem informações</span></li>
+								<li>Níveis 101 a 150 <span>Sem informações</span></li>
+								<li>Níveis 151 a 190 <span>Sem informações</span></li>
+								<li>Níveis 191 a 200 <span>Sem informações</span></li>
+							</ul>
+						</li>
+						<li id="indice_monstros">Monstros (+)
+							<ul class="lista_sucessos_sub lista_bloqueada">
+								<li>Dopels </li>
+								<li class="lista_item_bloqueado">Amakna <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Ilha de Moon <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Pandala <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Otomai <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Frigost <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Dimensões <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Espertárida <span>Sem informações</span></li>
+							</ul>
+						</li>
+						<li id="indice_missoes"><i class="fa fa-file-alt"></i> Missões (+)
+							<ul class="lista_sucessos_sub">
+								<li id="subIndice_missoesPrincipais">Missões principais</li>
+								<li id="subIndice_missoesAlmanax">Almanax</li>
+								<li class="lista_item_bloqueado">Cartaz de procurado <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Alinhamento <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Justiceiros <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Krosmoz <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Torres da irmandade <span>Sem informações</span></li>
+								<li id="subIndice_missoesAstrub">Astrub</li>
+								<li class="lista_item_bloqueado">Acampamento do Bworks <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Cania <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Castelo de Amakna <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Ilha de Frigost <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Ilha de Moon <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Ilha de Otomai <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Ilha dos Wabbits <span>Sem informações</span></li>
+								<li id="subIndice_missoesIncarnam">Incarnam</li>
+								<li class="lista_item_bloqueado">Mantanha dos Koalaks <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Animotopia <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Porto de Madestram <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Província de Amakna <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Espertárida <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Sidimote <span>Sem informações</span></li>
+								<li class="lista_item_bloqueado">Sufokia <span>Sem informações</span></li>
+							</ul>
+						</li>
+						<li id="indice_profissoes"><i class="fa fa-hammer"></i> Profissões</li>
+						<li id="indice_criacao"> Criação
+						</li>
+						<li id="indice_eventos"><i class="fa fa-star"></i> Eventos (+)
+							<ul class="lista_sucessos_sub lista_bloqueada">
+								<li>Ilha de Nataw <span>Sem informações</span></li>
+								<li>Arquipélago de Vulkânia <span>Sem informações</span></li>
+								<li>Relouin <span>Sem informações</span></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="col-7 borda_sucessos">
+				
+					<ul class="lista_missoes_sucessos" id="sucessos_inicio" style="display:block;">
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/208.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Navegue pela guia de sucessos como se estivesse dentro do jogo!</h5>
+									<p>
+										Como se estivesse dentro do jogo, utilize o menu a esquerda para navegar entre os diversos sucessos disponíveis e 
+										descubra de um modo fácil como terminar aquela missão ou sucesso chato!
+									</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				
+					<ul class="lista_missoes_sucessos" id="sucessos_profissoes">
+						<div class="alert alert-warning" style="margin-top: 15px;">
+							Ainda não temos informações para os sucessos da categoria <strong>Profissões</strong>, mas nossos Bworks já estão trabalhando nisso.
+						</div>
+					</ul>
+					
+					<ul class="lista_missoes_sucessos" id="sucessos_criacao">
+						<div class="alert alert-warning" style="margin-top: 15px;">
+							Ainda não temos informações para os sucessos da categoria <strong>Criação</strong>, mas nossas marmulas e dragoperus já estão sendo preparadas.
+						</div>
+					</ul>
+					
+					<ul class="lista_missoes_sucessos" id="sucessos_monstros">
+						<div class="alert alert-warning" style="margin-top: 15px;">
+							Ainda não temos informações para os sucessos da categoria <strong>Monstros</strong>, mas já estamos providenciando armas de nossos ferreiros de confiança.
+						</div>
+					</ul>
+					
+					<ul class="lista_missoes_sucessos" id="sucessos_eventos">
+						<div class="alert alert-warning" style="margin-top: 15px;">
+							Ainda não temos informações para os sucessos da categoria <strong>Eventos</strong>. Nossos Gluendes estão de férias no momento.
+						</div>
+					</ul>
+					
+					<ul class="lista_missoes_sucessos" id="sucessos_calaboucos">
+						<div class="alert alert-warning" style="margin-top: 15px;">
+							Ainda não temos informações para os sucessos da categoria <strong>Calabouços</strong>, mas nossos fabricantes já estão em busca de recursos para manufatura de novos ídolos.
+						</div>
+					</ul>
+		
+		
+					<!-- Sucesso de Exploração geral -->
+					<ul class="lista_missoes_sucessos" id="sucessos_exploracao">
+						<div style="padding: 10px;">
+							<div style="opacity: 0.5" class="text-center">
+								<i>Clique no sucesso para ver o mapa</i>
+							</div>
+						</div>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="./img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>As viagens deformam a juventude</h5>
+									<p>Obter os seguintes sucessos. <span><i>clique para ver o mapa</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Nas nuvens (Incarnam)</li>
+								<li>Terra de novatos (Astrub)</li>
+								<li>Boa viagem (Amakna)</li>
+								<li>Na praia abandonada... (Ilha de Moon)</li>
+								<li>As cenouwas estão prontas (Ilha dos Wabbits)</li>
+								<li>Conchas e crustáceos... (Ilha do Minotoror)</li>
+								<li>A cidade branca (Bonta)</li>
+								<li>Pedregulhos por todo lado (Cania)</li>
+								<li>A cidade do medo (Brakmar)</li>
+								<li>Passeio lúgebre (Sidimote)</li>
+								<li>Tudo isso por um pouco de Kaliptus (Montanha dos Koalaks)</li>
+								<li>Pandalada (Pandala)</li>
+								<li>Viagem ao centro da turfeira (Ilha de Otomai)</li>
+								<li>Frio na espinha (Ilha de Kifril)</li>
+								<li>Sangue-frio (Frigost)</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 11.335.662 
+										</div>
+										<div class="col-6">
+											
+										</div>
+										<div class="col-12">
+											<ul>
+												<li><strong>Ornamento:</strong> Explorador honorável</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/176.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Dimensão Obscura (Sombra)</h5>
+									<p>Clique para ver o mapa completo</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>A cidade de ouro (Enutropia)</h5>
+									<p>Clique para ver o mapa completo</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>A cidade dos ladrões (Sramvil)</h5>
+									<p>Clique para ver o mapa completo</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Seu lugar é no museu (Xelorium)</h5>
+									<p>Clique para ver o mapa completo</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Bendito terreno de jogo (Ecafliperama)</h5>
+									<p>Clique para ver o mapa completo</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Aquárioooo (Profundezas de Sufokia)</h5>
+									<p>Clique para ver o mapa completo</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Travessia do deserto (Espetárida)</h5>
+									<p>Clique para ver o mapa completo</p>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+					
+					
+					<!-- Sucessos Geral -->
+					<ul class="lista_missoes_sucessos" id="sucessos_geral">
+					
+						<div style="padding: 10px;">
+							<div style="opacity: 0.5" class="text-center">
+								<i>Os sucessos faltantes serão postados em breve.</i>
+							</div>
+						</div>
+					
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/77.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Veterano</h5>
+									<p>Atingir o nível 200. <span><i>confira nossas dicas</i></span></p>
+								</div>
+							</div>
+						</li>
+							
+						<div style="margin-bottom: 15px; padding: 10px;">
+							Você completará alguns sucessos ao atingir os níveis 10, 20, 40, 60, 80, 100, 120, 140, 160, 180 e 200, recebendo como
+							recompensa um todo de <strong>35.216 Kamas</strong> e também ornamentos aos níveis 100, 160 e 200.
+							<div class="text-center" style="margin-top: 10px;">
+							Confira nosso guia de up completo, <a>clique aqui</a>.
+							</div>
+						</div>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Está falando comigo?</h5>
+									<p>Obter 16.000 pontos de sucesso. <span><i>confira nossas dicas</i></span></p>
+								</div>
+							</div>
+						</li>
+							
+						<div style="margin-bottom: 15px; padding: 10px;">
+							Você completará alguns sucessos ao atingir 500, 1.000, 1.337, 4.000, 6.000, 8.000, 10.000, 12.000,
+							14.000 e 16.000 pontos de sucesso, recebendo como recompensa um todo de 
+							<strong>395.820 Kamas</strong>, pontos de experiência de acordo com o nível do seu persoangens, os companheiros
+							Cavaleiro de Astrub, Korvox e Frondo, e também 7 ornamentos.
+							<div class="text-center" style="margin-top: 10px;">
+							Confira nosso guia de como ganhar vários pontos de sucesso de forma rápida, <a>clique aqui</a>.
+							</div>
+						</div>
+							
+						
+					</ul>
+					
+					
+					<!-- Sucessos do Almanax -->
+					<ul class="lista_missoes_sucessos" id="sucessos_missoesAlmanax">
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>O descanso do dragão</h5>
+									<p>Completar as seguintes missões. <span><i>confira nossas dicas</i></span></p>
+								</div>
+							</div>
+							</li>
+							<ol style="display: block;" type="1">
+								<div style="font-size: 12px;margin-bottom: 15px;">Todos os dias ao completar as missões entregues pelo Theodorant Ax você recebe como recompensa (além de Kamas e experiência)
+								uma <i>Página do Calendário</i>. Ao completar 365 páginas a missão é completada. Lógicamente, você demorará um ano para terminar esta
+								missão caso faça-a todos os dias.<br>
+								Você também habilita alguns outros sucessos do Almanax ao juntar 1, 100, 200 e 300 Páginas do Calendário respectivamente.<br><br>
+								Veja algumas dicas que preparamos para você:
+								</div>
+								<li>
+								Novas missões do Almanax estão disponíveis todos os dias às 00:00 horas no horário de París na França, equivalente às 19:00 horas no horário
+								oficial de Brasilia no Brasil e às 23:00 horas de Lisboa em Portugal.
+								</li>
+								<li>
+								Você pode acessar o calendário online do Almanax e saber com antecedência a oferenda e os bônus dos próximos dias, veja 
+								<a href="http://www.krosmoz.com/pt/almanax" target="_blank">clicando aqui</a>.
+								</li>
+								<li>
+								Tem planos para upar alguma profissão? Verifique o bônus do Almanax dos próximos dias, sempre há bônus onde a experiência obtida em alguma
+								profissão específica está com uma porcentagem extra de ganho.
+								</li>
+								<li>
+								Alguns bônus do Almanax permite que os artesões recuperem uma porcentagem dos recursos da receita do item criado. Aproveite esse bônus para craftar
+								itens caros, uma vez que você tem chance de recuperar os recursos valiosos da receita.
+								</li>
+								<li>
+								Antecipe-se e verifique qual a oferenda dos próximos dias e colete os recursos (ou compre mais barato no mercado) para vender mais caro depois no
+								dia da missão.
+								</li>
+								
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 6.801.397
+										</div>
+										<div class="col-6">
+											Kamas: 118.443
+										</div>
+										<div class="col-12">
+											<ul>
+												<li><strong>Dolmanax</strong></li>
+												<li><strong>Título:</strong> Herói do ano</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ol>
+						
+					</ul>
+					
+					<!-- Sucessos de missões - Geral -->
+					<ul class="lista_missoes_sucessos" id="sucessos_missoes">
+						<div style="padding: 10px;">
+							<div style="opacity: 0.5" class="text-center">
+								<i>Os sucessos faltantes serão postados em breve.<br>Selecione um sucesso e clique nas etapas para ser direcionado ao tutorial.</i>
+							</div>
+						</div>
+						
+						
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>De Incarnam a Astrub</h5>
+									<p>Obter os seguintes sucessos. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>A caminho da aventura</li>
+								<li>Um começo exemplar</li>
+								<li>Um cidadão modelo</li>
+								<li>Périplo astrubiano</li>
+								<li>Falar com Rathrosk</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 508.536
+										</div>
+										<div class="col-6">
+											Kamas: 4.760
+										</div>
+										<div class="col-12">
+											<ul>
+												<li><strong>Dofus prateado</strong></li>
+												<li><strong>Ornamento: Aventureiro honorável</strong></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Em busca do destino</h5>
+									<p>Completar 1.300 missões. <span><i>clique para ver nossas dicas deste sucesso chato</i></span></p>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+					
+					
+					<!-- Sucessos de missões Principais -->
+					<ul class="lista_missoes_sucessos" id="sucessos_missoesPrincipais">
+						<div style="padding: 10px;">
+							<div style="opacity: 0.5" class="text-center">
+								<i>Os sucessos faltantes serão postados em breve.<br>Selecione um sucesso e clique nas etapas para ser direcionado ao tutorial.</i>
+							</div>
+						</div>
+
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>O caminho da aventura</h5>
+									<p>Terminar a série de missões principais de <strong>Incarnam</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>O anel do perigo</li>
+								<li>Sob o olhar dos deuses</li>
+								<li>Respostas para tudo</li>
+								<li>O vilarejo nas nuvens</li>
+								<li>A esperança e a tragédia</li>
+								<li>Na boca do Milimilobo</li>
+								<li>Próxima parada: Astrub</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 23.168
+										</div>
+										<div class="col-6">
+											Kamas: 280
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>5x Osso de chafer</li>
+												<li>5x Cinzas eternas</li>
+												<li>5x Cogumelo</li>
+												<li>5x Baba de papatudo</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Um cidadão modelo</h5>
+									<p>Terminar a série de missões principais de <strong>Astrub</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Os princípios de Arkya</li>
+								<li>Pisando em ovos</li>
+								<li>Conselho de classe</li>
+								<li><strong>Missão de classe</strong></li>
+								<li>Cheirinho de problema</li>
+								<li>Passeio na floresta</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 143.592
+										</div>
+										<div class="col-6">
+											Kamas: 1.480
+										</div>
+										<div class="col-12">
+											<ul>
+												<li><strong>Emote:</strong> Ajoelhado</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Mas onde estão os Dofus?</h5>
+									<p>Terminar a série do <strong>Ronald, o Sábio Laposa</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Consulta médica</li>
+								<li>Missão dos costumes de Pandala</li>
+								<li>Pandala: seus vilarejos...</li>
+								<li>Pandala: seu ar puro...</li>
+								<li>Lenda Laposa</li>
+								<li>Ver Dark Vlad e não morrer</li>
+								<li>A feiticeira dos pântanos</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 254.268
+										</div>
+										<div class="col-6">
+											Kamas: 2.380
+										</div>
+										<div class="col-12">
+											<ul>
+												<li><strong>Emote:</strong> Caçador de Dofus</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+					</ul>
+					
+					<!-- Sucessos de missões de Incarnam -->
+					<ul class="lista_missoes_sucessos" id="sucessos_missoesIncarnam">
+						<div style="padding: 10px;">
+							<div style="opacity: 0.5" class="text-center">
+								Selecione um sucesso e clique nas etapas para ser direcionado ao tutorial.</i>
+							</div>
+						</div>
+
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>O grande explorador</h5>
+									<p>Terminar a série de missões relacionadas à <strong>exploração</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Transporte incomum</li>
+								<li>Vestígios dos deuses</li>
+								<li>Vistos do céu</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 11.581
+										</div>
+										<div class="col-6">
+											
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>10x Pétala diáfana</li>
+												<li>10x Baba de papatudo</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Serviço na milícia</h5>
+									<p>Terminar a série de missões relacionadas ao <strong>combate</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Posto à prova</li>
+								<li>Campos de batalha</li>
+								<li>Por água abaixo</li>
+								<li>Dizimando Papatudos</li>
+								<li>Caça aos Galmatunos</li>
+								<li>Lição de humildade</li>
+								<li>Faxina macabra</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 19.116
+										</div>
+										<div class="col-6">
+											Kamas: 241
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>10x Osso de Chafer</li>
+												<li>10x Volva de Aminita</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Profissional qualificado</h5>
+									<p>Terminar a série de missões relacionadas às <strong>profissões</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Produtos naturais</li>
+								<li>O machado e a picareta</li>
+								<li>Tudo do Boon e do melhor</li>
+								<li>A escolha das armas</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 16.952
+										</div>
+										<div class="col-6">
+											Kamas: 204
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>10x Água potável</li>
+												<li>10x Cogumelo</li>
+												<li>10x Osso de Chafer</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Confusão em Incarnam</h5>
+									<p>Completar as seguintes missões. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>A torta secreta</li>
+								<li>Morte ao rato!</li>
+								<li>Criptologia</li>
+								<li>Um pouco de pigmento</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 5.791
+										</div>
+										<div class="col-6">
+											
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>5x Relíquia de Incarnam</li>
+												<li>5x Pena quimérica</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Um começo exemplar</h5>
+									<p>Obter os seguinte sucessos. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+							
+							<ul class="lista_missoes_sucessos_sub">
+								<li>O grande explorador</li>
+								<li>Serviço na milícia</li>
+								<li>Profissional qualificado</li>
+								<li>Confusão em Incarnam</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 34.751
+										</div>
+										<div class="col-6">
+											Kamas: 560
+										</div>
+										<div class="col-12">
+											<ul>
+												<li><strong>Título:</strong> Filho de Incarnam</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+					</ul>
+					
+					<!-- Sucessos de missões de Astrub -->
+					<ul class="lista_missoes_sucessos" id="sucessos_missoesAstrub">
+						<div style="padding: 10px;">
+							<div style="opacity: 0.5" class="text-center">
+								Selecione um sucesso e clique nas etapas para ser direcionado ao tutorial.</i>
+							</div>
+						</div>
+
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>A ocasião faz o ladrão</h5>
+									<p>Terminar a série de missões relacionadas à <strong>exploração</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Burros n'água</li>
+								<li>A sete palmos debaixo da terra</li>
+								<li>O feitiço se volta contra o feiticeiro</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 100.053
+										</div>
+										<div class="col-6">
+											Kamas: 1.105
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>1x Pele Adoecida</li>
+												<li>1x Roscas de Milirato Strubiano</li>
+												<li>1x Crina de Cilirato Strubiano</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>A grande biblioteca</h5>
+									<p>Terminar a série de missões relacionadas à <strong>história</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>História em movimento</li>
+								<li>Restauração rápida</li>
+								<li>Verdadeiros ratos de biblioteca</li>
+								<li>Lenda do outono</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 254.268
+										</div>
+										<div class="col-6">
+											Kamas: 2.380
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>1x Pata de Arakne do Esgoto</li>
+												<li>1x Olho de Ramã Astrubiano</li>
+												<li>1x Língua de Grárgula</li>
+												<li>1x Cueca de Couro Apertada do Garglifo</li>	
+												<li><strong>Título:</strong> Marca-página</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Mercenário de aço</h5>
+									<p>Terminar a série de missões relacionadas ao <strong>combate</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Muita espuma pra pouco chope</li>
+								<li>Briga de rua</li>
+								<li>Feito Pesk fora d'água</li>
+								<li>Lanchinho leve</li>
+								<li>Jogo cruel</li>
+								<li>Invasão de domicílio</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 254.268
+										</div>
+										<div class="col-6">
+											Kamas: 2.380
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>1x Escama viscosa</li>
+												<li>1x Rodela de madeir</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Sem tempo a perder</h5>
+									<p>Terminar a série de missões relacionadas às <strong>profissões</strong>. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Crise sanitária</li>
+								<li>Entregador substituto</li>
+								<li>Golemante</li>
+								<li>O rebelde da floresta</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 143.592
+										</div>
+										<div class="col-6">
+											Kamas: 1.480
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>1x Pêlos de Darit</li>
+												<li>1x Tecido de Javali</li>
+												<li>1x Pedra de granito</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>O habitat urbano</h5>
+									<p>Completar as seguintes missões. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>Miaw escaldado tem medo de água fria</li>
+								<li>Os tufos de cabelos dos heróis</li>
+								<li>Meu melhor inimigo</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 143.592
+										</div>
+										<div class="col-6">
+											Kamas: 1.480
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>1x Semente de gergelim</li>
+												<li>1x Escalpo de Mililobo</li>
+												<li>1x Tecido de Esquilóxido</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/203.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Fugas e emboscadas</h5>
+									<p>Completar as seguintes missões. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+
+							<ul class="lista_missoes_sucessos_sub">
+								<li>A missãozinha da pradaria</li>
+								<li>Quem semeia vento colhe Artempestad</li>
+								<li>Lenhadores em apuros</li>
+								<li>Gênios em ação</li>
+								<li>A invasão dos profanadores de sepultura</li>
+								<li>O descanso está no campo</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 254.268
+										</div>
+										<div class="col-6">
+											Kamas: 2.380
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>1x Fio de seda</li>
+												<li>1x Folha de Girassol Selvagem</li>
+												<li>1x Algodão Ancestral</li>
+												<li>1x Olho de Paparneiro</li>
+												<li>1x Exército de Carrapatos</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="row">
+								<div class="col-2">
+									<img class="img-fluid" src="img/sucessos/82.png"/>
+								</div>
+								<div class="col-10">
+									
+									<h5>Périplo astrubiano</h5>
+									<p>Obter os seguinte sucessos. <span><i>clique para ver mais</i></span></p>
+								</div>
+							</div>
+							
+							<ul class="lista_missoes_sucessos_sub">
+								<li>A ocasião faz o ladrão</li>
+								<li>A grande biblioteca</li>
+								<li>Mercenário de aço</li>
+								<li>Sem tempo a perder</li>
+								<li>O habitat urbano</li>
+								<li>Fugas e emboscadas</li>
+								<div class="sucessos_recompensas">
+									<div class="row">
+										<div class="col-12">
+											<strong>Recompensas</strong>
+										</div>
+										<div class="col-6">
+											Experiência: 381.402
+										</div>
+										<div class="col-6">
+											Kamas: 4.760
+										</div>
+										<div class="col-12">
+											<ul>
+												<li>1x Adubo</li>
+												<li>1x Baba de Rosa Demoníaca</li>
+												<li>1x Sangue de Papatudo</li>
+												<li>1x Chifre de Chefe de Guerra Papatudo</li>
+												<li>1x Estômago de Nojoso</li>
+												<li>1x Suco de Nojoso</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						
+					</ul>
+					
+				</div>
+			</div>
+			
+		</div>	
+		
+	</div>
+	
+	</body>
+
+	<!-- custom javascript file -->
+	<script src="script.js"></script>
+
+
+</html>
